@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Galería de productos ecuatorianos de Mi Terra Mi Ecuador.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Terra Mi Ecuador | Productos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="contenedor barra-nav">
+      <div class="marca">
+        <h1>Mi Terra Mi Ecuador</h1>
+        <span>Productos de nuestra tierra</span>
+      </div>
+
+      <nav aria-label="Menú principal">
+        <ul class="menu">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html" class="activo">Productos</a></li>
+          <li><a href="presupuesto.html">Presupuesto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pagina-interna">
+    <section class="encabezado-interno">
+      <div class="contenedor">
+        <div class="titulo-seccion reveal">
+          <span>Galería</span>
+          <h2>Nuestros productos ecuatorianos</h2>
+          <p>
+            Explora nuestra selección de productos agrícolas representativos del Ecuador.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="contenedor">
+        <div class="galeria-productos">
+          <article class="producto-card reveal">
+            <div class="producto-imagen papaya">🍈</div>
+            <div class="producto-info">
+              <h3>Papaya</h3>
+              <p>Fruta tropical dulce, suave y refrescante, muy apreciada por su valor nutricional.</p>
+            </div>
+          </article>
+
+          <article class="producto-card reveal">
+            <div class="producto-imagen cafe">☕</div>
+            <div class="producto-info">
+              <h3>Café</h3>
+              <p>Café ecuatoriano de aroma intenso y sabor característico de alta calidad.</p>
+            </div>
+          </article>
+
+          <article class="producto-card reveal">
+            <div class="producto-imagen cacao">🍫</div>
+            <div class="producto-info">
+              <h3>Cacao</h3>
+              <p>Cacao fino de aroma, reconocido a nivel mundial por su excelente calidad.</p>
+            </div>
+          </article>
+
+          <article class="producto-card reveal">
+            <div class="producto-imagen maiz">🌽</div>
+            <div class="producto-info">
+              <h3>Maíz</h3>
+              <p>Base de numerosos platos típicos y parte esencial de la tradición gastronómica.</p>
+            </div>
+          </article>
+
+          <article class="producto-card reveal">
+            <div class="producto-imagen chirimoya">🍃</div>
+            <div class="producto-info">
+              <h3>Chirimoya</h3>
+              <p>Fruta delicada, cremosa y de sabor exquisito, valorada por su textura única.</p>
+            </div>
+          </article>
+
+          <article class="producto-card reveal">
+            <div class="producto-imagen mango">🥭</div>
+            <div class="producto-info">
+              <h3>Mango</h3>
+              <p>Fruta jugosa y aromática, ideal para el consumo fresco y derivados naturales.</p>
+            </div>
+          </article>
+
+          <article class="producto-card reveal">
+            <div class="producto-imagen banano">🍌</div>
+            <div class="producto-info">
+              <h3>Banano</h3>
+              <p>Uno de los productos más importantes del Ecuador, reconocido por su exportación mundial.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-contenido">
+      <div class="pie-info">
+        <h4>Mi Terra Mi Ecuador</h4>
+        <p>
+          Dirección: Av. de los Productos Andinos 245, Quito, Ecuador.
+          Empresa dedicada a la venta y promoción de productos ecuatorianos.
+        </p>
+      </div>
+
+      <div class="redes" aria-label="Redes sociales">
+        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+        <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">W</a>
+      </div>
+    </div>
+
+    <div class="contenedor pie-legal">
+      <p>&copy; 2026 Mi Terra Mi Ecuador. Todos los derechos reservados.</p>
+      <p>Aviso legal | Política de privacidad | Uso académico y demostrativo</p>
+    </div>
+  </footer>
+
+  <script>
+    const elementosReveal = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entradas) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    elementosReveal.forEach((elemento) => {
+      observer.observe(elemento);
+    });
+  </script>
+</body>
+</html>
