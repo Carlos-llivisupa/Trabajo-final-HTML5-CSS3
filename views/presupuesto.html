@@ -1,0 +1,153 @@
+<!-- views/presupuesto.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Solicita un presupuesto de productos ecuatorianos en Mi Tierra Mi Ecuador.">
+  <meta name="keywords" content="presupuesto, formulario, productos ecuatorianos">
+  <meta name="author" content="Mi Tierra Mi Ecuador">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Tierra Mi Ecuador | Presupuesto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="contenedor barra-nav">
+      <div class="marca">
+        <h1>Mi Tierra Mi Ecuador</h1>
+        <p>Productos de nuestra tierra</p>
+      </div>
+      <nav aria-label="Menú principal">
+        <ul class="menu">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a class="activo" href="presupuesto.html">Presupuesto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-interno" aria-labelledby="titulo-presupuesto">
+      <div class="contenedor">
+        <header class="encabezado-seccion">
+          <p class="subtitulo-seccion">Solicitud</p>
+          <h2 id="titulo-presupuesto">Formulario de presupuesto</h2>
+          <p>
+            Completa todos los campos requeridos. El formulario utiliza validación HTML para asegurar que los
+            datos introducidos tengan el formato adecuado.
+          </p>
+        </header>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="formulario-presupuesto">
+      <div class="contenedor contenedor-formulario">
+        <h2 id="formulario-presupuesto">Datos de solicitud</h2>
+
+        <form action="gracias.html" method="get" class="formulario">
+          <fieldset>
+            <legend>Datos personales</legend>
+
+            <p class="campo">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}">
+            </p>
+
+            <p class="campo">
+              <label for="apellidos">Apellidos</label>
+              <input type="text" id="apellidos" name="apellidos" required minlength="2" maxlength="80" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,80}">
+            </p>
+
+            <p class="campo">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9,15}" maxlength="15">
+            </p>
+
+            <p class="campo">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" required maxlength="100">
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Datos del presupuesto</legend>
+
+            <p class="campo">
+              <label for="producto">Producto de interés</label>
+              <select id="producto" name="producto" required>
+                <option value="">Seleccione una opción</option>
+                <option value="papaya">Papaya</option>
+                <option value="cafe">Café</option>
+                <option value="cacao">Cacao</option>
+                <option value="maiz">Maíz</option>
+              </select>
+            </p>
+
+            <p class="campo">
+              <label for="cantidad">Cantidad estimada en kilogramos</label>
+              <input type="number" id="cantidad" name="cantidad" required min="1" max="10000" step="1">
+            </p>
+
+            <p class="campo">
+              <label for="fecha">Fecha estimada de entrega</label>
+              <input type="date" id="fecha" name="fecha" required>
+            </p>
+
+            <p class="campo">
+              <label for="mensaje">Descripción de la solicitud</label>
+              <textarea id="mensaje" name="mensaje" rows="6" cols="40" required minlength="10" maxlength="500"></textarea>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Condiciones</legend>
+
+            <p class="campo campo-check">
+              <input type="checkbox" id="privacidad" name="privacidad" required>
+              <label for="privacidad">He leído y acepto la política de privacidad</label>
+            </p>
+
+            <p class="campo campo-check">
+              <input type="checkbox" id="comunicaciones" name="comunicaciones">
+              <label for="comunicaciones">Acepto recibir comunicaciones comerciales</label>
+            </p>
+          </fieldset>
+
+          <p class="acciones-formulario">
+            <input type="submit" value="Enviar solicitud" class="btn btn-principal">
+            <input type="reset" value="Limpiar formulario" class="btn btn-secundario">
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-contenido">
+      <section class="pie-info" aria-labelledby="titulo-pie-presupuesto">
+        <h2 id="titulo-pie-presupuesto">Mi Tierra Mi Ecuador</h2>
+        <p>Dirección: Av. de los Productos Andinos 245, Quito, Ecuador.</p>
+        <p>Empresa dedicada a la venta y promoción de productos ecuatorianos.</p>
+      </section>
+      <nav class="redes" aria-label="Redes sociales">
+        <ul>
+          <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contenedor pie-legal">
+      <p>&copy; 2026 Mi Tierra Mi Ecuador. Todos los derechos reservados.</p>
+      <p><a href="privacidad.html">Política de privacidad</a> | Uso académico y demostrativo</p>
+    </div>
+  </footer>
+</body>
+</html>
